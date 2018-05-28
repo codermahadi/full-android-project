@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FullApplication</string>
+    <string name="toolbarTitle">Education</string>
 </resources>
