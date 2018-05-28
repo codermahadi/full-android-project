@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/db"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="Dashboard" />
+    <item
+        android:id="@+id/even"
+        android:icon="@drawable/ic_looks_one_black_24dp"
+        android:title="Event" />
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_email_black_24dp"
+        android:title="Search" />
+    <item
+        android:id="@+id/setting"
+        android:icon="@drawable/ic_loyalty_black_24dp"
+        android:title="Settings" />
+    <item
+        android:id="@+id/activities"
+        android:icon="@drawable/ic_location_searching_black_24dp"
+        android:title="Activities" />
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_account_box_black_24dp"
+        android:title="Logout" />
+</menu>
