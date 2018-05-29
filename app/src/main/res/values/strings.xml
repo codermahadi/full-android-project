@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">FullApplication</string>
     <string name="toolbarTitle">Education</string>
+    <string name="even">Event</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
 </resources>

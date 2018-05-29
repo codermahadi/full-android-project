@@ -1,6 +1,6 @@
 package com.example.mahadi.fullapplication;
 
-import android.support.annotation.NonNull;
+import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -32,7 +31,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
 
@@ -92,7 +90,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (id == R.id.db) {
             Toast.makeText(MainActivity.this, "clicking on Dashboard", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.even) {
-            Toast.makeText(MainActivity.this, "clicking on Even", Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(this,EvenActivity.class);
+            startActivity(intent);
+
         } else if (id == R.id.email) {
             Toast.makeText(MainActivity.this, "clicking on Email", Toast.LENGTH_SHORT).show();
 
