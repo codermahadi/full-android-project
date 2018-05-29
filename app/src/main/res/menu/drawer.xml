@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
 
     <item
         android:id="@+id/db"
@@ -10,11 +12,11 @@
         android:icon="@drawable/ic_looks_one_black_24dp"
         android:title="Event" />
     <item
-        android:id="@+id/search"
+        android:id="@+id/email"
         android:icon="@drawable/ic_email_black_24dp"
         android:title="Search" />
     <item
-        android:id="@+id/setting"
+        android:id="@+id/blog"
         android:icon="@drawable/ic_loyalty_black_24dp"
         android:title="Settings" />
     <item
