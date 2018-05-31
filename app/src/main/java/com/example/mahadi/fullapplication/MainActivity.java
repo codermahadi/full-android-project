@@ -95,7 +95,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(intent);
 
         } else if (id == R.id.email) {
-            Toast.makeText(MainActivity.this, "clicking on Email", Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(this,QrActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.blog) {
             Toast.makeText(MainActivity.this, "clicking on Blog", Toast.LENGTH_SHORT).show();
