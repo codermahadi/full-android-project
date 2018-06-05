@@ -6,4 +6,6 @@
     <string name="close">Close</string>
     <string name="title_activity_qr">QrActivity</string>
     <string name="you_have_click_java_postal">You have cliked Java Portal</string>
+    <string name="username">Mahadi</string>
+    <string name="password">123456</string>
 </resources>
