@@ -1,12 +1,17 @@
 package com.example.mahadi.fullapplication;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class EvenActivity extends AppCompatActivity {
@@ -51,9 +56,28 @@ public class EvenActivity extends AppCompatActivity {
 
             case R.id.miCompose:
                 Toast.makeText(EvenActivity.this, "clicking on email", Toast.LENGTH_SHORT).show();
+                customToast();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
+
+//    Customize toast function
+    public void customToast(){
+
+        LayoutInflater inflater = getLayoutInflater();
+        View customView = inflater.inflate(R.layout.custom_toast, (ViewGroup) findViewById(R.id.tst));
+
+        TextView text = (TextView) customView.findViewById(R.id.tst_txt);
+        text.setText("This is a custom toast");
+
+
+        Toast toast = new Toast(EvenActivity.this);
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.CENTER,0,0);
+        toast.setView(customView);
+        toast.show();
+    }
+
 }
