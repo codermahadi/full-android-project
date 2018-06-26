@@ -7,9 +7,11 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     Toolbar toolbar;
     private DrawerLayout myDrawerLayout;
     private ActionBarDrawerToggle drawerToggle;
+    private CardView sdl, resd, subway, vi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,44 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        sdl = (CardView) findViewById(R.id.scdl);
+        vi = (CardView) findViewById(R.id.strv);
+        resd = (CardView) findViewById(R.id.resd);
+        subway = (CardView) findViewById(R.id.sdway);
+
+        sdl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Toast.makeText(MainActivity.this, "Schdular", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        vi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Toast.makeText(MainActivity.this, "Street View", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        resd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Toast.makeText(MainActivity.this, "Restaurant", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        subway.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Toast.makeText(MainActivity.this, "Sub Way", Toast.LENGTH_LONG).show();
+            }
+        });
+
 
     }
 
@@ -91,21 +132,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Toast.makeText(MainActivity.this, "clicking on Dashboard", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.even) {
 
-            Intent intent = new Intent(this,EvenActivity.class);
+            Intent intent = new Intent(this, EvenActivity.class);
             startActivity(intent);
 
         } else if (id == R.id.email) {
 
-            Intent intent = new Intent(this,QrActivity.class);
+            Intent intent = new Intent(this, QrActivity.class);
             startActivity(intent);
 
         } else if (id == R.id.blog) {
             Toast.makeText(MainActivity.this, "clicking on Blog", Toast.LENGTH_SHORT).show();
 
-        }else if (id == R.id.activities) {
+        } else if (id == R.id.activities) {
             Toast.makeText(MainActivity.this, "clicking on activities", Toast.LENGTH_SHORT).show();
 
-        }else if (id == R.id.logout) {
+        } else if (id == R.id.logout) {
             Toast.makeText(MainActivity.this, "clicking on logout", Toast.LENGTH_SHORT).show();
 
         }

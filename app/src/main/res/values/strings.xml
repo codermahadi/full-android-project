@@ -8,4 +8,6 @@
     <string name="you_have_click_java_postal">You have cliked Java Portal</string>
     <string name="username">Mahadi</string>
     <string name="password">123456</string>
+    <string name="scheduler">Scheduler</string>
+    <string name="view_rest">View Rest</string>
 </resources>
